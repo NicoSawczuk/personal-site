@@ -31,7 +31,7 @@ export default function AboutMeCard() {
     return (
         <Card className={classes.root} elevation={5}>
             <CardContent>
-                <Grid container direction="row" justify="flex-end" alignItems="center">
+                <Grid container direction="row" justify="space-around" alignItems="center">
                     <Grid item xs={8}>
                         <Typography variant="h3" color="primary" component component="h3">
                             Nicolás Teodoro Sawczuk
@@ -46,9 +46,8 @@ export default function AboutMeCard() {
                             Podes visitar la seccion <Link underline="hover" color="textPrimary" onClick={() => setLocation("/projects")}>Proyectos</Link> para ver algunos de los proyectos que estuve desarrollando
                         </Typography>
                     </Grid>
-                    <Grid item xs={1}>
-                    </Grid>
-                    <Grid item xs={3}>
+
+                    <Grid item >
                         <MyAvatar />
                     </Grid>
                 </Grid>

@@ -22,8 +22,8 @@ export default function AboutMe() {
                 <Sidebar title="Mis proyectos" changeTheme={changeTheme} darkState={darkState} />
                 <main className={classes.content}>
                     <div className={classes.appBarSpacer} />
-                    <Container maxWidth="lg" className={classes.container}>
-                        <Grid container spacing={3}>
+                    <Container maxWidth="lg" className={classes.container} spacing={2}>
+                        <Grid container >
                             <ListOfProjects />
                         </Grid>
                     </Container>

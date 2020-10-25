@@ -66,13 +66,14 @@ export default function ListOfSkills() {
             colorText: '#61dafb',
             icon: faReact
         }
+        
     ]
 
     return (
-        <Grid container spacing={2} >
+        <Grid container justify="center" alignItems="center" spacing={2} >
             {skilss.map((skill) => {
                 return (
-                    <Grid item xs={6} sm={3}  key={skill.key}>
+                    <Grid item xl key={skill.key}>
                         <SkillCard
                             title={skill.title}
                             color={skill.color}

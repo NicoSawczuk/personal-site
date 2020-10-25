@@ -88,10 +88,10 @@ export default function ListOfProjects() {
     ]
 
     return (
-        <Grid container spacing={2}>
+        <Grid container justify="center" alignItems="center" spacing={8}>
             {projects.map((project) => {
                 return (
-                    <Grid item sm key={project.key}>
+                    <Grid item lg key={project.key}>
                         <ProjectCard
                             title={project.title}
                             subtitle={project.subtitle}

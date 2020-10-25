@@ -4,16 +4,12 @@ import Card from '@material-ui/core/Card';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import CardContent from '@material-ui/core/CardContent';
+import { sizing } from '@material-ui/system';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
 const useStyles = makeStyles({
-    root: {
-        minWidth: '100px',
-        
-        marginTop: '16px'
-    },
     title: {
         fontSize: 14,
     },
@@ -30,23 +26,25 @@ export default function SkillCard({ title, color, colorText, icon }) {
 
     const style = {
         card: {
-
+            marginTop: '16px',
             backgroundColor: color,
             color: colorText,
+            minWidth: 280,
+            flexGrow: 1
         }
+        
     };
 
     return (
-        <Card className={classes.root} style={style.card} elevation={4}>
+        <Card style={style.card} elevation={4}>
             <CardContent>
-                <Grid container justify="flex-start" alignItems="center">
-                    <Grid item xs={4}>
+                <Grid container direction="row" alignItems="center" justify="space-between">
+                    <Grid item>
                         <Typography variant="h5" component component="h5">
                             {title}
                         </Typography>
                     </Grid>
-                    <Grid item xs={4}></Grid>
-                    <Grid item xs={2} className={classes.icon}>
+                    <Grid item>
                         <FontAwesomeIcon icon={icon} size="5x" />
                     </Grid>
                 </Grid>

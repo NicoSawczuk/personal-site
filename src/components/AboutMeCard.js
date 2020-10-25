@@ -12,6 +12,7 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import MailIcon from '@material-ui/icons/Mail';
+import Paper from '@material-ui/core/Paper';
 
 const useStyles = makeStyles({
     root: {
@@ -51,38 +52,33 @@ export default function AboutMeCard() {
                         <MyAvatar />
                     </Grid>
                 </Grid>
-                <Grid container direction="row" justify="flex-start" alignItems="flex-end">
+                <Grid container direction="row" justify="center" alignItems="flex-end">
                     <Grid item>
-                        <Typography variant="body2" color="secondary" component="p" alignItems="flex-end">
 
-                        </Typography>
-                    </Grid>
-                </Grid>
-                <Grid container direction="row" justify="flex-start" alignItems="flex-end">
-                    <Grid item>
-                        <Typography variant="body2" color="secondary" component="p" alignItems="flex-end">
-                            
-                            <IconButton title="GitHub">
-                                <Link key="GitHub" component="a" href="https://github.com/NicoSawczuk" color="secondary" target="_blank">
-                                <GitHubIcon fontSize="large" />
-                                </Link>
-                            </IconButton>
-                            <IconButton title="Instagram">
-                                <Link key="Instagram" component="a" href="https://www.instagram.com/nicosawczuk/" color="secondary" target="_blank">
-                                    <InstagramIcon fontSize="large" />
-                                </Link>
-                            </IconButton>
-                            <IconButton title="Facebook">
-                                <Link key="Facebook" component="a" href="https://www.facebook.com/Nico.Sawczuk.10/" color="secondary" target="_blank">
-                                    <FacebookIcon fontSize="large" />
-                                </Link>
-                            </IconButton>
-                            <IconButton title="Mail">
-                                <Link key="Email" component="a" href="mailto:nico.290698@gmail.com" color="secondary" target="_blank">
-                                    <MailIcon fontSize="large" />
-                                </Link>
-                            </IconButton>
-                        </Typography>
+                            <Typography variant="body2" color="secondary" component="p" alignItems="flex-end">
+
+                                <IconButton title="GitHub">
+                                    <Link key="GitHub" component="a" href="https://github.com/NicoSawczuk" color="secondary" target="_blank">
+                                        <GitHubIcon fontSize="large" />
+                                    </Link>
+                                </IconButton>
+                                <IconButton title="Instagram">
+                                    <Link key="Instagram" component="a" href="https://www.instagram.com/nicosawczuk/" color="secondary" target="_blank">
+                                        <InstagramIcon fontSize="large" />
+                                    </Link>
+                                </IconButton>
+                                <IconButton title="Facebook">
+                                    <Link key="Facebook" component="a" href="https://www.facebook.com/Nico.Sawczuk.10/" color="secondary" target="_blank">
+                                        <FacebookIcon fontSize="large" />
+                                    </Link>
+                                </IconButton>
+                                <IconButton title="Mail">
+                                    <Link key="Email" component="a" href="mailto:nico.290698@gmail.com" color="secondary" target="_blank">
+                                        <MailIcon fontSize="large" />
+                                    </Link>
+                                </IconButton>
+                            </Typography>
+
                     </Grid>
                 </Grid>
             </CardContent>

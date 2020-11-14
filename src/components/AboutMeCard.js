@@ -12,7 +12,6 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import MailIcon from '@material-ui/icons/Mail';
-import Paper from '@material-ui/core/Paper';
 
 const useStyles = makeStyles({
     root: {
@@ -27,7 +26,7 @@ const useStyles = makeStyles({
 
 export default function AboutMeCard() {
     const classes = useStyles();
-    const [location, setLocation] = useLocation();
+    const [, setLocation] = useLocation();
 
     return (
         <Card className={classes.root} elevation={5}>

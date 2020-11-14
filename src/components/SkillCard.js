@@ -23,7 +23,6 @@ const useStyles = makeStyles({
 export default function SkillCard({ title, color, colorText }) {
 
 
-    const classes = useStyles();
 
     const style = {
         card: {

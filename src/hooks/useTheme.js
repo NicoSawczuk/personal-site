@@ -6,7 +6,8 @@ import {
     pink,
     red,
     orange,
-    green
+    green,
+    grey
   } from "@material-ui/core/colors";
 
 export default function useTheme() {
@@ -19,9 +20,14 @@ export default function useTheme() {
     const mainWarningColor = darkState ? orange[500] : orange[500];
     const mainInfoColor = darkState ? lightBlue[500] : lightBlue[500];
     const mainSuccessColor = darkState ? green[500] : green[500];
+    const mainBackGroundColor = darkState ? grey[900] : "#FFFFFF";
+    const inheritBackGroundColor = darkState ? "#b3e5fc" : "#f8bbd0";
     const darkTheme = createMuiTheme({
         palette: {
             type: palletType,
+            background: {
+                default: mainBackGroundColor,
+            },
             primary: {
                 main: mainPrimaryColor,
             },

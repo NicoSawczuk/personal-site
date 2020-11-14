@@ -4,9 +4,10 @@ import Card from '@material-ui/core/Card';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import CardContent from '@material-ui/core/CardContent';
-import { sizing } from '@material-ui/system';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+import { IconContext } from "react-icons";
+import { SiJavascript, SiPhp, SiPython, SiJava, SiLaravel, SiDjango, SiReact, SiFlask } from 'react-icons/si';
 
 
 const useStyles = makeStyles({
@@ -19,7 +20,7 @@ const useStyles = makeStyles({
     }
 });
 
-export default function SkillCard({ title, color, colorText, icon }) {
+export default function SkillCard({ title, color, colorText }) {
 
 
     const classes = useStyles();
@@ -32,7 +33,7 @@ export default function SkillCard({ title, color, colorText, icon }) {
             minWidth: 280,
             flexGrow: 1
         }
-        
+
     };
 
     return (
@@ -45,7 +46,18 @@ export default function SkillCard({ title, color, colorText, icon }) {
                         </Typography>
                     </Grid>
                     <Grid item>
-                        <FontAwesomeIcon icon={icon} size="5x" />
+                        <IconContext.Provider value={{ className: "global-class-name" }, { size: "4.5em" }}>
+                            {title === 'Javascript' ? (<SiJavascript />)
+                                :title === 'PHP' ? (<SiPhp />)
+                                :title === 'Python' ? (<SiPython />)
+                                :title === 'Java' ? (<SiJava />)
+                                :title === 'Laravel' ? (<SiLaravel />)
+                                :title === 'Django' ? (<SiDjango />)
+                                :title === 'ReactJS' ? (<SiReact />)
+                                :title === 'Flask' ? (<SiFlask />)
+                                :null
+                            }
+                        </IconContext.Provider>
                     </Grid>
                 </Grid>
 

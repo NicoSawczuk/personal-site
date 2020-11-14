@@ -1,17 +1,8 @@
 import React from 'react'
 import SkillCard from './SkillCard';
 import Grid from '@material-ui/core/Grid';
-import { makeStyles } from '@material-ui/core/styles';
-import { faJsSquare, faPhp, faPython, faJava, faLaravel, faReact } from '@fortawesome/free-brands-svg-icons'
 
 export default function ListOfSkills() {
-    const useStyles = makeStyles({
-        root: {
-            marginTop: '14px',
-            flexGrow: 1,
-        },
-    });
-    const classes = useStyles();
 
 
     const skilss = [
@@ -19,52 +10,52 @@ export default function ListOfSkills() {
             key: 1,
             title: 'Javascript',
             color: '#F5EF98',
-            colorText: '#000000',
-            icon: faJsSquare
+            colorText: '#000000'
         },
         {
             key: 2,
             title: 'PHP',
             color: '#9695FA',
-            colorText: '#000000',
-            icon: faPhp
+            colorText: '#000000'
         },
         {
             key: 3,
             title: 'Python',
             color: '#587DFA',
-            colorText: '#F5EF98',
-            icon: faPython
+            colorText: '#F5EF98'
         },
         {
             key: 4,
-            title: 'Java     ',
+            title: 'Java',
             color: '#F55D53',
-            colorText: '#FFFFFF',
-            icon: faJava
+            colorText: '#FFFFFF'
         },
         {
             key: 5,
             title: 'Laravel',
             color: '#FFFFFF',
-            colorText: '#F55D53',
-            icon: faLaravel
+            colorText: '#F55D53'
         }
         ,
         {
             key: 6,
             title: 'Django',
             color: '#06BF79',
-            colorText: '#FFFFFF',
-            icon: faPython
+            colorText: '#FFFFFF'
         }
         ,
         {
             key: 7,
             title: 'ReactJS',
             color: '#282c34',
-            colorText: '#61dafb',
-            icon: faReact
+            colorText: '#61dafb'
+        }
+        ,
+        {
+            key: 8,
+            title: 'Flask',
+            color: '#FFFFFF',
+            colorText: '#000000'
         }
         
     ]

@@ -8,13 +8,14 @@ import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
 import CardActions from '@material-ui/core/CardActions';
 import Collapse from '@material-ui/core/Collapse';
-    import Skeleton from '@material-ui/lab/Skeleton';
-    import IconButton from '@material-ui/core/IconButton';
+import Skeleton from '@material-ui/lab/Skeleton';
+import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import { red } from '@material-ui/core/colors';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import ArrowForward from '@material-ui/icons/ArrowForward';
+import {Chip} from '@material-ui/core'
 
 
 
@@ -45,7 +46,8 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function ProjectCard({ title, subtitle = '', image = '', imageTitle, description, expandDescription, linkRepo, linkDemo }) {
+
+export default function ProjectCard({ title, image = '', imageTitle, description, expandDescription, linkRepo, linkDemo, tecnologias }) {
     const classes = useStyles();
     const [expanded, setExpanded] = useState(false);
     const [loading, setLoading] = useState(true)
@@ -65,25 +67,20 @@ export default function ProjectCard({ title, subtitle = '', image = '', imageTit
                 <CardHeader
                     title={
                         loading ? (
-                            <Skeleton animation="wave" height={10} width="80%" style={{ marginBottom: 6 }} />
+                            <React.Fragment>
+                                <Skeleton animation="wave" height={20} width="80%" style={{ paddingBottom: 6 }} />
+                            </React.Fragment>
 
                         ) : (
                                 title
                             )
                     }
-                    subheader={
-                        loading ? (
-                            <Skeleton animation="wave" height={10} width="50%" style={{ marginBottom: 6 }} />
-
-                        ) : (
-                                subtitle
-                            )
-                    }
+                    style={{minHeight: '63px'}}
                 />
 
                 {loading
                     ?
-                    (<Skeleton variant="rect" width={320} height={160} />)
+                    (<Skeleton variant="rect" width={320} height={158} />)
                     :
                     <CardMedia
                         className={classes.media}
@@ -94,20 +91,30 @@ export default function ProjectCard({ title, subtitle = '', image = '', imageTit
                 <CardContent>
                     {loading ?
                         <React.Fragment>
-                            <Skeleton animation="wave" height={10} style={{ marginBottom: 6 }} />
-                            <Skeleton animation="wave" height={10} width="80%" />
+                            <Skeleton animation="wave" height={15} />
+                            <Skeleton animation="wave" height={15}  />
+                            <Skeleton animation="wave" height={35} style={{paddingTop: 30}}/>
                         </React.Fragment>
                         :
-                        <Typography variant="body2" color="textSecondary" component="p">
-                            {description}
-                        </Typography>
+
+                        <React.Fragment>
+                            <Typography variant="body2" color="textSecondary" component="p" >
+                                {description}
+                            </Typography>
+                            <Typography variant="body2" color="textSecondary" component="p" style={{ paddingTop: '5px'}}>
+                                {tecnologias.map((tecnologia) => {
+                                    return(<Chip clickable={true} variant="default" size="small" label={tecnologia.nombre} style={{background: tecnologia.color, color: 'white', borderColor: tecnologia.color, marginRight: '4px'}}/>)
+                                })}
+                            </Typography>
+                        </React.Fragment>
+
                     }
 
                 </CardContent>
                 <CardActions disableSpacing>
                     {
                         loading ? (
-                            <Skeleton animation="wave" height={60} width="40%" style={{ marginLeft: 8 }} />
+                            <Skeleton animation="wave" height={60} width="40%" style={{ marginLeft: 8 ,paddingTop: '30px'}} />
 
                         ) : <React.Fragment>
                                 <IconButton

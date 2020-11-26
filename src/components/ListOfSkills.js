@@ -53,11 +53,25 @@ export default function ListOfSkills() {
         ,
         {
             key: 8,
+            title: 'Angular',
+            color: '#FA223F',
+            colorText: '#FFFFFF'
+        }
+        ,
+        {
+            key: 9,
             title: 'Flask',
             color: '#FFFFFF',
             colorText: '#000000'
         }
-        
+        ,
+        {
+            key: 10,
+            title: 'Express JS',
+            color: '#68A063',
+            colorText: '#FFFFFF'
+        }
+
     ]
 
     return (

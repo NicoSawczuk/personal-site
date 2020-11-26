@@ -7,7 +7,7 @@ import CardContent from '@material-ui/core/CardContent';
 
 
 import { IconContext } from "react-icons";
-import { SiJavascript, SiPhp, SiPython, SiJava, SiLaravel, SiDjango, SiReact, SiFlask } from 'react-icons/si';
+import { SiJavascript, SiPhp, SiPython, SiJava, SiLaravel, SiDjango, SiReact, SiFlask, SiNodeDotJs, SiAngular } from 'react-icons/si';
 
 
 const useStyles = makeStyles({
@@ -47,14 +47,16 @@ export default function SkillCard({ title, color, colorText }) {
                     <Grid item>
                         <IconContext.Provider value={{ className: "global-class-name" }, { size: "4.5em" }}>
                             {title === 'Javascript' ? (<SiJavascript />)
-                                :title === 'PHP' ? (<SiPhp />)
-                                :title === 'Python' ? (<SiPython />)
-                                :title === 'Java' ? (<SiJava />)
-                                :title === 'Laravel' ? (<SiLaravel />)
-                                :title === 'Django' ? (<SiDjango />)
-                                :title === 'ReactJS' ? (<SiReact />)
-                                :title === 'Flask' ? (<SiFlask />)
-                                :null
+                                : title === 'PHP' ? (<SiPhp />)
+                                    : title === 'Python' ? (<SiPython />)
+                                        : title === 'Java' ? (<SiJava />)
+                                            : title === 'Laravel' ? (<SiLaravel />)
+                                                : title === 'Django' ? (<SiDjango />)
+                                                    : title === 'ReactJS' ? (<SiReact />)
+                                                        : title === 'Flask' ? (<SiFlask />)
+                                                            : title === 'Express JS' ? (<SiNodeDotJs />)
+                                                                : title === 'Angular' ? (<SiAngular />)
+                                                                    : null
                             }
                         </IconContext.Provider>
                     </Grid>

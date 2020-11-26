@@ -58,7 +58,7 @@ export default function ProjectCard({ title, image = '', imageTitle, description
     useEffect(() => {
         const timer = setTimeout(() => {
             setLoading(false)
-        }, 300);
+        }, 700);
         return () => clearTimeout(timer);
     }, []);
     return (

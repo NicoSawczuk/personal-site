@@ -7,7 +7,7 @@ import CardContent from '@material-ui/core/CardContent';
 
 
 import { IconContext } from "react-icons";
-import { SiJavascript, SiPhp, SiPython, SiJava, SiLaravel, SiDjango, SiReact, SiFlask, SiNodeDotJs, SiAngular } from 'react-icons/si';
+import { SiJavascript, SiPhp, SiPython, SiJava, SiLaravel, SiDjango, SiReact, SiFlask, SiNodeDotJs, SiAngular, SiFirebase } from 'react-icons/si';
 
 
 const useStyles = makeStyles({
@@ -56,7 +56,8 @@ export default function SkillCard({ title, color, colorText }) {
                                                         : title === 'Flask' ? (<SiFlask />)
                                                             : title === 'Express JS' ? (<SiNodeDotJs />)
                                                                 : title === 'Angular' ? (<SiAngular />)
-                                                                    : null
+                                                                    : title === 'Firebase' ? (<SiFirebase />)
+                                                                        : null
                             }
                         </IconContext.Provider>
                     </Grid>

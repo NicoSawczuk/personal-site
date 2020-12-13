@@ -71,6 +71,13 @@ export default function ListOfSkills() {
             color: '#68A063',
             colorText: '#FFFFFF'
         }
+        ,
+        {
+            key: 11,
+            title: 'Firebase',
+            color: '#FFFFFF',
+            colorText: '#FAD338'
+        }
 
     ]
 

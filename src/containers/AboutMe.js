@@ -21,29 +21,29 @@ export default function AboutMe() {
 
 
 
-  return (
-    <ThemeProvider theme={darkTheme}>
-      <div className={classes.root}>
-        <CssBaseline />
-        <Sidebar title="Sobre mi" changeTheme={changeTheme} darkState={darkState} />
-        <main className={classes.content}>
-          <div className={classes.appBarSpacer} />
-          <Container maxWidth="lg" className={classes.container} spacing={2}>
-            <Grid item>
-              <AboutMeCard />
-            </Grid>
+    return (
+      <ThemeProvider theme={darkTheme}>
+        <div className={classes.root}>
+          <CssBaseline />
+          <Sidebar title="Sobre mi" changeTheme={changeTheme} darkState={darkState} />
+          <main className={classes.content}>
+            <div className={classes.appBarSpacer} />
+            <Container maxWidth="lg" className={classes.container} spacing={2}>
+              <Grid item>
+                <AboutMeCard />
+              </Grid>
 
-            <Grid item className={classes.gridItem}>
-              <Typography variant="h4" component="h4" color="secondary">Formación académica</Typography>
-              <TimelineFormation />
-            </Grid>
-            <Grid container spacing={3}>
-            <Typography variant="h4" component="h4" color="secondary">Tecnologías</Typography>
-              <ListOfSkills />
-            </Grid>
-          </Container>
-        </main>
-      </div>
-    </ThemeProvider>
-  );
+              <Grid item className={classes.gridItem}>
+                <Typography variant="h4" component="h4" color="secondary">Formación académica</Typography>
+                <TimelineFormation />
+              </Grid>
+              <Grid container spacing={3}>
+              <Typography variant="h4" component="h4" color="secondary">Tecnologías</Typography>
+                <ListOfSkills />
+              </Grid>
+            </Container>
+          </main>
+        </div>
+      </ThemeProvider>
+    );
 }

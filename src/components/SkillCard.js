@@ -1,5 +1,4 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
@@ -8,17 +7,6 @@ import CardContent from '@material-ui/core/CardContent';
 
 import { IconContext } from "react-icons";
 import { SiJavascript, SiPhp, SiPython, SiJava, SiLaravel, SiDjango, SiReact, SiFlask, SiNodeDotJs, SiAngular, SiFirebase } from 'react-icons/si';
-
-
-const useStyles = makeStyles({
-    title: {
-        fontSize: 14,
-    },
-    icon: {
-        alignItems: 'right',
-        alignContent: 'right'
-    }
-});
 
 export default function SkillCard({ title, color, colorText }) {
 

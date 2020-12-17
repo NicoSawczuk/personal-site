@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react';
+import { useState } from 'react';
 import { createMuiTheme } from "@material-ui/core/styles";
 import {
     lightBlue,
@@ -21,7 +21,6 @@ export default function useTheme() {
     const mainInfoColor = darkState ? lightBlue[500] : lightBlue[500];
     const mainSuccessColor = darkState ? green[500] : green[500];
     const mainBackGroundColor = darkState ? grey[900] : "#FFFFFF";
-    const inheritBackGroundColor = darkState ? "#b3e5fc" : "#f8bbd0";
     const darkTheme = createMuiTheme({
         palette: {
             type: palletType,
@@ -50,10 +49,10 @@ export default function useTheme() {
         }
     });
 
-    const changeTheme = useCallback((value) => {
+    const changeTheme = (value) => {
         setDarkState(!value);
         window.sessionStorage.setItem('dark', !value)
-    }, [darkState])
+    }
 
     return{
         darkTheme,

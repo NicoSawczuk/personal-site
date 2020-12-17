@@ -32,18 +32,18 @@ export default function AboutMeCard() {
         <Card className={classes.root} elevation={5}>
             <CardContent>
                 <Grid container direction="row" justify="space-around" alignItems="center">
-                    <Grid item xs={8}>
-                        <Typography variant="h3" color="primary" component component="h3">
+                    <Grid item lg md sm>
+                        <Typography variant="h4" color="primary" component component="h4">
                             Nicolás Teodoro Sawczuk
                         </Typography>
-                        <Typography variant="body1" color="textSecondary" component="p" align="justify">
-                            Tengo 22 años, soy de Oberá Misiones, Argentina
+                        <Typography variant="subtitle1" color="textSecondary" component="p" align="justify">
+                            Tengo 22 años, soy de Oberá Misiones, Argentina.
                         </Typography>
-                        <Typography variant="body1" color="textSecondary" component="p" align="justify">
-                            Mi objetivo es adquirir nuevos conocimientos desarrollando aplicaciones web. Poder aprender nuevas tecnologías tanto en backend como en frontend y además adquirir experiencias trabajando junto a un equipo de desarrollo
+                        <Typography variant="subtitle1" color="textSecondary" component="p" align="justify">
+                            Mi objetivo es adquirir nuevos conocimientos desarrollando aplicaciones web. Poder aprender nuevas tecnologías tanto en backend como en frontend y además adquirir experiencias trabajando junto a un equipo de desarrollo.
                         </Typography>
-                        <Typography variant="body1" color="textSecondary" component="p" align="justify">
-                            Podes visitar la seccion <Link underline="hover" color="textPrimary" onClick={() => setLocation("/projects")}>Proyectos</Link> para ver algunos de los proyectos que estuve desarrollando
+                        <Typography variant="subtitle1" color="textSecondary" component="p" align="justify">
+                            Podes visitar la seccion <Link underline="hover" color="textPrimary" onClick={() => setLocation("/projects")}>Proyectos</Link> para ver algunos de los proyectos que estuve desarrollando.
                         </Typography>
                     </Grid>
 

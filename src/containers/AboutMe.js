@@ -37,7 +37,7 @@ export default function AboutMe() {
                 <Typography variant="h4" component="h4" color="secondary">Formación académica</Typography>
                 <TimelineFormation />
               </Grid>
-              <Grid container spacing={3}>
+              <Grid container spacing={3} className={classes.gridItem}>
               <Typography variant="h4" component="h4" color="secondary">Tecnologías</Typography>
                 <ListOfSkills />
               </Grid>

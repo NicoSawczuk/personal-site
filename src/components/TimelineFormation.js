@@ -51,8 +51,8 @@ export default function TimelineFormation() {
                     </TimelineSeparator>
                     <TimelineContent>
                         <Paper elevation={3} className={classes.paper}>
-                            <Typography variant="subtitle1" component="h1">
-                                Técnico en Equipos e Instalaciones Electromecánicas <Typography variant="subtitle1" component="h1" color="textSecondary">E.P.E.T N° 3</Typography>
+                            <Typography variant="subtitle1" >
+                                Técnico en Equipos e Instalaciones Electromecánicas <Typography variant="subtitle1"  color="textSecondary">E.P.E.T N° 3</Typography>
                             </Typography>
                             <Typography color="primary">Recibido</Typography>
                         </Paper>
@@ -72,8 +72,8 @@ export default function TimelineFormation() {
                     </TimelineSeparator>
                     <TimelineContent>
                         <Paper elevation={3} className={classes.paper}>
-                            <Typography variant="subtitle1" component="h1">
-                                Auxiliar en Informática <Typography variant="subtitle1" component="h1" color="textSecondary">Universidad Nacional de Misiones</Typography>
+                            <Typography variant="subtitle1" >
+                                Auxiliar en Informática <Typography variant="subtitle1"  color="textSecondary">Universidad Nacional de Misiones</Typography>
                             </Typography>
                             <Typography color="primary">Recibido</Typography>
                         </Paper>
@@ -93,8 +93,8 @@ export default function TimelineFormation() {
                     </TimelineSeparator>
                     <TimelineContent>
                         <Paper elevation={3} className={classes.paper}>
-                            <Typography variant="subtitle1" component="h1">
-                                Analista Programador <Typography variant="subtitle1" component="h1" color="textSecondary">Universidad Nacional de Misiones</Typography>
+                            <Typography variant="subtitle1" >
+                                Analista Programador <Typography variant="subtitle1"  color="textSecondary">Universidad Nacional de Misiones</Typography>
                             </Typography>
                             <Typography color="primary">Recibido</Typography>
                         </Paper>
@@ -114,8 +114,8 @@ export default function TimelineFormation() {
                     </TimelineSeparator>
                     <TimelineContent>
                         <Paper elevation={3} className={classes.paper}>
-                            <Typography variant="subtitle1" component="h1">
-                                Analista en sistemas de Computación <Typography variant="subtitle1" component="h1" color="textSecondary">Universidad Nacional de Misiones</Typography>
+                            <Typography variant="subtitle1" >
+                                Analista en sistemas de Computación <Typography variant="subtitle1"  color="textSecondary">Universidad Nacional de Misiones</Typography>
                             </Typography>
                             <Typography color="primary">Recibido</Typography>
                         </Paper>
@@ -135,8 +135,8 @@ export default function TimelineFormation() {
                     </TimelineSeparator>
                     <TimelineContent>
                         <Paper elevation={3} className={classes.paper}>
-                            <Typography variant="subtitle1" component="h1">
-                                Licenciatura en Sistemas de Información <Typography variant="subtitle1" component="h1" color="textSecondary">Universidad Nacional de Misiones</Typography>
+                            <Typography variant="subtitle1" >
+                                Licenciatura en Sistemas de Información <Typography variant="subtitle1"  color="textSecondary">Universidad Nacional de Misiones</Typography>
                             </Typography>
                             <Typography color="secondary">Actualmente me encuentro cursando el 4to año de la carrera</Typography>
                         </Paper>

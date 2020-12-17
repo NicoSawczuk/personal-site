@@ -12,6 +12,7 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import MailIcon from '@material-ui/icons/Mail';
+import Grow from '@material-ui/core/Grow';
 
 const useStyles = makeStyles({
     root: {
@@ -29,30 +30,31 @@ export default function AboutMeCard() {
     const [, setLocation] = useLocation();
 
     return (
-        <Card className={classes.root} elevation={5}>
-            <CardContent>
-                <Grid container direction="row" justify="space-around" alignItems="center">
-                    <Grid item lg md sm>
-                        <Typography variant="h4" color="primary" component component="h4">
-                            Nicolás Teodoro Sawczuk
+        <Grow in={true}>
+            <Card className={classes.root} elevation={5}>
+                <CardContent>
+                    <Grid container direction="row" justify="space-around" alignItems="center">
+                        <Grid item lg md sm>
+                            <Typography variant="h4" color="primary" component component="h4">
+                                Nicolás Teodoro Sawczuk
                         </Typography>
-                        <Typography variant="subtitle1" color="textSecondary" component="p" align="justify">
-                            Tengo 22 años, soy de Oberá Misiones, Argentina.
+                            <Typography variant="subtitle1" color="textSecondary" component="p" align="justify">
+                                Tengo 22 años, soy de Oberá Misiones, Argentina.
                         </Typography>
-                        <Typography variant="subtitle1" color="textSecondary" component="p" align="justify">
-                            Mi objetivo es adquirir nuevos conocimientos desarrollando aplicaciones web. Poder aprender nuevas tecnologías tanto en backend como en frontend y además adquirir experiencias trabajando junto a un equipo de desarrollo.
+                            <Typography variant="subtitle1" color="textSecondary" component="p" align="justify">
+                                Mi objetivo es adquirir nuevos conocimientos desarrollando aplicaciones web. Poder aprender nuevas tecnologías tanto en backend como en frontend y además adquirir experiencias trabajando junto a un equipo de desarrollo.
                         </Typography>
-                        <Typography variant="subtitle1" color="textSecondary" component="p" align="justify">
-                            Podes visitar la seccion <Link underline="hover" color="textPrimary" onClick={() => setLocation("/projects")}>Proyectos</Link> para ver algunos de los proyectos que estuve desarrollando.
+                            <Typography variant="subtitle1" color="textSecondary" component="p" align="justify">
+                                Podes visitar la seccion <Link underline="hover" color="textPrimary" onClick={() => setLocation("/projects")}>Proyectos</Link> para ver algunos de los proyectos que estuve desarrollando.
                         </Typography>
-                    </Grid>
+                        </Grid>
 
-                    <Grid item >
-                        <MyAvatar />
+                        <Grid item >
+                            <MyAvatar />
+                        </Grid>
                     </Grid>
-                </Grid>
-                <Grid container direction="row" justify="center" alignItems="flex-end">
-                    <Grid item>
+                    <Grid container direction="row" justify="center" alignItems="flex-end">
+                        <Grid item>
 
                             <Typography variant="body2" color="secondary" component="p" alignItems="flex-end">
 
@@ -78,9 +80,10 @@ export default function AboutMeCard() {
                                 </IconButton>
                             </Typography>
 
+                        </Grid>
                     </Grid>
-                </Grid>
-            </CardContent>
-        </Card>
+                </CardContent>
+            </Card>
+        </Grow>
     );
 }

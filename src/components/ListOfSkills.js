@@ -5,7 +5,7 @@ import Grid from '@material-ui/core/Grid';
 export default function ListOfSkills() {
 
 
-    const skilss = [
+    const skills = [
         {
             key: 1,
             title: 'Javascript',
@@ -83,9 +83,9 @@ export default function ListOfSkills() {
 
     return (
         <Grid container justify="center" alignItems="center" spacing={2} >
-            {skilss.map((skill) => {
+            {skills.map((skill) => {
                 return (
-                    <Grid item xl key={skill.key}>
+                    <Grid item lg md sm xs key={skill.key}>
                         <SkillCard
                             title={skill.title}
                             color={skill.color}

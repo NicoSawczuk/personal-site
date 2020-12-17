@@ -35,8 +35,8 @@ export default function AboutMeCard() {
                 <CardContent>
                     <Grid container direction="row" justify="space-around" alignItems="center">
                         <Grid item lg md sm>
-                            <Typography variant="h4" color="primary" component component="h4">
-                                Nicolás Teodoro Sawczuk
+                            <Typography variant="h5" color="primary" component component="h5">
+                                Nicolás Sawczuk
                         </Typography>
                             <Typography variant="subtitle1" color="textSecondary" component="p" align="justify">
                                 Tengo 22 años, soy de Oberá Misiones, Argentina.

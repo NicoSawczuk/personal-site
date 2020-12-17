@@ -16,6 +16,7 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import ArrowForward from '@material-ui/icons/ArrowForward';
 import {Chip} from '@material-ui/core'
+import Grow from '@material-ui/core/Grow';
 
 
 
@@ -51,6 +52,7 @@ export default function ProjectCard({ title, image = '', imageTitle, description
     const classes = useStyles();
     const [expanded, setExpanded] = useState(false);
     const [loading, setLoading] = useState(true)
+    const [checked, setChecked] = useState(false)
     const handleExpandClick = () => {
         setExpanded(!expanded);
     };
@@ -59,10 +61,12 @@ export default function ProjectCard({ title, image = '', imageTitle, description
         const timer = setTimeout(() => {
             setLoading(false)
         }, 700);
+        setChecked(true)
         return () => clearTimeout(timer);
     }, []);
     return (
         <>
+        <Grow in={checked}>
             <Card className={classes.root} elevation={5}>
                 <CardHeader
                     title={
@@ -148,6 +152,7 @@ export default function ProjectCard({ title, image = '', imageTitle, description
                     </CardContent>
                 </Collapse>
             </Card>
+            </Grow>
         </>
     );
 }

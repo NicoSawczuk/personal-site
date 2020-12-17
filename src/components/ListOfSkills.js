@@ -85,7 +85,7 @@ export default function ListOfSkills() {
         <Grid container justify="center" alignItems="center" spacing={2} >
             {skills.map((skill) => {
                 return (
-                    <Grid item xl key={skill.key}>
+                    <Grid item lg md sm xs key={skill.key}>
                         <SkillCard
                             title={skill.title}
                             color={skill.color}

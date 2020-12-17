@@ -114,7 +114,7 @@ export default function ProjectCard({ title, image = '', imageTitle, description
                 <CardActions disableSpacing>
                     {
                         loading ? (
-                            <Skeleton animation="wave" height={60} width="40%" style={{ marginLeft: 8 ,paddingTop: '30px'}} />
+                            <Skeleton animation="wave" height={60} width="45%" style={{ marginLeft: 15 ,paddingTop: '30px'}} />
 
                         ) : <React.Fragment>
                                 <IconButton

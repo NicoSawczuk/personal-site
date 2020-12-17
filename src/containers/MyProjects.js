@@ -23,7 +23,7 @@ export default function AboutMe() {
                 <main className={classes.content}>
                     <div className={classes.appBarSpacer} />
                     <Container maxWidth="lg" className={classes.container} spacing={2}>
-                        <Grid container >
+                        <Grid container direction="row" justify="center" alignItems="center">
                             <ListOfProjects />
                         </Grid>
                     </Container>

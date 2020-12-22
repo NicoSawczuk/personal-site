@@ -15,7 +15,7 @@ import { red } from '@material-ui/core/colors';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import ArrowForward from '@material-ui/icons/ArrowForward';
-import {Chip} from '@material-ui/core'
+import { Chip } from '@material-ui/core'
 import Grow from '@material-ui/core/Grow';
 
 
@@ -66,92 +66,92 @@ export default function ProjectCard({ title, image = '', imageTitle, description
     }, []);
     return (
         <>
-        <Grow in={checked}>
-            <Card className={classes.root} elevation={5}>
-                <CardHeader
-                    title={
-                        loading ? (
-                            <React.Fragment>
-                                <Skeleton animation="wave" height={20} width="80%" style={{ paddingBottom: 6 }} />
-                            </React.Fragment>
+            <Grow in={checked}>
+                <Card className={classes.root} elevation={5}>
+                    <CardHeader
+                        title={
+                            loading ? (
+                                <React.Fragment>
+                                    <Skeleton animation="wave" height={20} width="80%" style={{ paddingBottom: 6 }} />
+                                </React.Fragment>
 
-                        ) : (
-                                title
-                            )
-                    }
-                    style={{minHeight: '63px'}}
-                />
-
-                {loading
-                    ?
-                    (<Skeleton variant="rect" width={320} height={158} />)
-                    :
-                    <CardMedia
-                        className={classes.media}
-                        image={image}
-                        title={imageTitle}
+                            ) : (
+                                    title
+                                )
+                        }
+                        style={{ minHeight: '63px' }}
                     />
-                }
-                <CardContent>
-                    {loading ?
-                        <React.Fragment>
-                            <Skeleton animation="wave" height={15} />
-                            <Skeleton animation="wave" height={15}  />
-                            <Skeleton animation="wave" height={35} style={{paddingTop: 30}}/>
-                        </React.Fragment>
+
+                    {loading
+                        ?
+                        (<Skeleton variant="rect" width={320} height={158} />)
                         :
-
-                        <React.Fragment>
-                            <Typography variant="body2" color="textSecondary" component="p" >
-                                {description}
-                            </Typography>
-                            <Typography variant="body2" color="textSecondary" component="p" style={{ paddingTop: '5px'}}>
-                                {tecnologias.map((tecnologia) => {
-                                    return(<Chip clickable={true} variant="default" size="small" label={tecnologia.nombre} style={{background: tecnologia.color, color: 'white', borderColor: tecnologia.color, marginRight: '4px'}}/>)
-                                })}
-                            </Typography>
-                        </React.Fragment>
-
+                        <CardMedia
+                            image={image}
+                            className={classes.media}
+                            title={imageTitle}
+                        />
                     }
-
-                </CardContent>
-                <CardActions disableSpacing>
-                    {
-                        loading ? (
-                            <Skeleton animation="wave" height={60} width="45%" style={{ marginLeft: 15 ,paddingTop: '30px'}} />
-
-                        ) : <React.Fragment>
-                                <IconButton
-                                    className={clsx(classes.expand, {
-                                        [classes.expandOpen]: expanded,
-                                    })}
-                                    onClick={handleExpandClick}
-                                    aria-expanded={expanded}
-                                    title="Más detalles"
-                                >
-                                    <ExpandMoreIcon />
-                                </IconButton>
-                                <IconButton title="Ver en GitHub">
-                                    <Link href={linkRepo} color="inherit" target="_blank">
-                                        <GitHubIcon />
-                                    </Link>
-                                </IconButton>
-                                <IconButton title="Visitar">
-                                    <Link href={linkDemo} color="primary" target="_blank">
-                                        <ArrowForward />
-                                    </Link>
-                                </IconButton>
-                            </React.Fragment>
-                    }
-                </CardActions>
-                <Collapse in={expanded} timeout="auto" unmountOnExit>
                     <CardContent>
-                        <Typography paragraph>
-                            {expandDescription}
-                        </Typography>
+                        {loading ?
+                            <React.Fragment>
+                                <Skeleton animation="wave" height={15} />
+                                <Skeleton animation="wave" height={15} />
+                                <Skeleton animation="wave" height={35} style={{ paddingTop: 30 }} />
+                            </React.Fragment>
+                            :
+
+                            <React.Fragment>
+                                <Typography variant="body2" color="textSecondary" component="p" >
+                                    {description}
+                                </Typography>
+                                <Typography variant="body2" color="textSecondary" component="p" style={{ paddingTop: '5px' }}>
+                                    {tecnologias.map((tecnologia) => {
+                                        return (<Chip clickable={true} variant="default" size="small" label={tecnologia.nombre} style={{ background: tecnologia.color, color: 'white', borderColor: tecnologia.color, marginRight: '4px' }} />)
+                                    })}
+                                </Typography>
+                            </React.Fragment>
+
+                        }
+
                     </CardContent>
-                </Collapse>
-            </Card>
+                    <CardActions disableSpacing>
+                        {
+                            loading ? (
+                                <Skeleton animation="wave" height={60} width="45%" style={{ marginLeft: 15, paddingTop: '30px' }} />
+
+                            ) : <React.Fragment>
+                                    <IconButton
+                                        className={clsx(classes.expand, {
+                                            [classes.expandOpen]: expanded,
+                                        })}
+                                        onClick={handleExpandClick}
+                                        aria-expanded={expanded}
+                                        title="Más detalles"
+                                    >
+                                        <ExpandMoreIcon />
+                                    </IconButton>
+                                    <IconButton title="Ver en GitHub">
+                                        <Link href={linkRepo} color="inherit" target="_blank">
+                                            <GitHubIcon />
+                                        </Link>
+                                    </IconButton>
+                                    <IconButton title="Visitar">
+                                        <Link href={linkDemo} color="primary" target="_blank">
+                                            <ArrowForward />
+                                        </Link>
+                                    </IconButton>
+                                </React.Fragment>
+                        }
+                    </CardActions>
+                    <Collapse in={expanded} timeout="auto" unmountOnExit>
+                        <CardContent>
+                            <Typography paragraph>
+                                {expandDescription}
+                            </Typography>
+                        </CardContent>
+                    </Collapse>
+                </Card>
             </Grow>
         </>
     );

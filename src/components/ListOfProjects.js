@@ -17,10 +17,10 @@ export default function ListOfProjects() {
         }).catch(({ error }) => { console.log(error) })
     }, [])
     return (
-        <Grid container direction="row" justify="center" alignItems="center" spacing={8}>
+        <Grid container justify="center" alignItems="center" spacing={8}>
             {projects.map((project) => {
                 return (
-                    <Grid item lg md sm xs key={project.key}>
+                    <Grid item lg={4} md={5} sm={8} xs key={project.key}>
                         <ProjectCard
                             title={project.title}
                             image={project.image}

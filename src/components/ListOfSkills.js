@@ -82,7 +82,7 @@ export default function ListOfSkills() {
     ]
 
     return (
-        <Grid container justify="center" alignItems="center" spacing={2} >
+        <Grid container direction="row" justify="center" alignItems="center" spacing={2} >
             {skills.map((skill) => {
                 return (
                     <Grid item lg md sm xs key={skill.key}>

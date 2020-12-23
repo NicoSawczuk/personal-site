@@ -41,10 +41,12 @@ export default function AboutMe() {
               </Grid>
             </Grow>
             <Grow in={true}>
-              <Grid container spacing={3} className={classes.gridItem}>
-                <Typography variant="h4" color="secondary">Tecnologías</Typography>
-                <ListOfSkills />
-              </Grid>
+              <Container maxWidth="lg" className={classes.container} spacing={2}>
+                <Grid container spacing={3} className={classes.gridItem}>
+                  <Typography variant="h4" color="secondary">Tecnologías</Typography>
+                  <ListOfSkills />
+                </Grid>
+              </Container>
             </Grow>
           </Container>
         </main>

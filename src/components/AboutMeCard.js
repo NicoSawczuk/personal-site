@@ -9,7 +9,7 @@ import CardContent from '@material-ui/core/CardContent';
 import MyAvatar from './MyAvatar'
 import Link from '@material-ui/core/Link';
 import GitHubIcon from '@material-ui/icons/GitHub';
-import InstagramIcon from '@material-ui/icons/Instagram';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import MailIcon from '@material-ui/icons/Mail';
 import Grow from '@material-ui/core/Grow';
@@ -63,9 +63,9 @@ export default function AboutMeCard() {
                                         <GitHubIcon fontSize="large" />
                                     </Link>
                                 </IconButton>
-                                <IconButton title="Instagram">
-                                    <Link key="Instagram" component="a" href="https://www.instagram.com/nicosawczuk/" color="secondary" target="_blank">
-                                        <InstagramIcon fontSize="large" />
+                                <IconButton title="Linkedin">
+                                    <Link key="Linkedin" component="a" href="https://www.linkedin.com/in/nicolas-sawczuk/" color="secondary" target="_blank">
+                                        <LinkedInIcon fontSize="large" />
                                     </Link>
                                 </IconButton>
                                 <IconButton title="Facebook">

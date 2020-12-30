@@ -6,12 +6,14 @@ import ProjectCard from './ProjectCard'
 
 
 import { getProjects } from '../services/FirebaseServices'
+import { sendData } from '../services/userDataService'
 
 
 export default function ListOfProjects() {
     const [projects, setProjects] = useState([])
 
     useEffect(function () {
+        sendData('visitProjects');
         getProjects().then((projectsList) => {
             setProjects(projectsList)
         }).catch(({ error }) => { console.log(error) })

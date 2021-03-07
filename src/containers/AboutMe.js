@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 
 
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -13,14 +13,16 @@ import AboutMeCard from '../components/AboutMeCard';
 import TimelineFormation from '../components/TimelineFormation';
 import ListOfSkills from '../components/ListOfSkills';
 import Grow from '@material-ui/core/Grow';
-
+import { sendData } from '../services/userDataService'
 
 
 export default function AboutMe() {
   const classes = useStyles();
   const { darkTheme, changeTheme, darkState } = useTheme()
 
-
+  useEffect(function () {
+    sendData('visitAboutMe');
+}, [])
 
   return (
     <ThemeProvider theme={darkTheme}>
